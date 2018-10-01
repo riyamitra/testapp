@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-white m-0 p-0 box-shadow height">
+  <a class="navbar-brand bg-red navbar-padding font " href="#">&nbsp;&nbsp;Talentify&nbsp;&nbsp;</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link text-grey mr-3 font font-15 navbar-fontweight" [routerLink]="'/dashboard'">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-grey ml-3 mr-3 font font-15 navbar-fontweight" [routerLink]="'/pipeline'">Pipeline</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-grey ml-3 mr-3 font font-15 navbar-fontweight" [routerLink]="'/teams'">Teams</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-grey ml-3 mr-3 font font-15 navbar-fontweight" [routerLink]="'/products'">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-grey ml-3 mr-3 font font-15 navbar-fontweight" [routerLink]="'/leads'">Leads</a>
+      </li>
+    </ul>
+
+    <div class="nav-item dropdown ">
+      <div class="d-flex flex-row p-0 mr-3">
+        <img src="" alt="img" />
+        <a class="nav-link dropdown-toggle text-grey mr-3 text-grey-light font font-15 pl-0" href="#" id="dropdown01" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Welcome Vaibhav Verma</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          <a class="dropdown-item text-grey-light font" href="#">Profile</a>
+          <a class="dropdown-item text-grey-light font" href="#">Logout</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>

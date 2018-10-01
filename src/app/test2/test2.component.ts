@@ -1,0 +1,33 @@
+import { Component, OnInit, EventEmitter, ChangeDetectorRef } from '@angular/core';
+import { distinctUntilChanged, debounceTime, switchMap } from 'rxjs/operators'
+import { DataService } from '../test/service/service.service';
+
+@Component({
+  selector: 'app-test2',
+  templateUrl: './test2.component.html',
+  styleUrls: ['./test2.component.css'],
+  providers: [DataService]
+})
+export class Test2Component implements OnInit {
+  peopleTypeahead = new EventEmitter<string>();
+  serverSideFilterItems = [];
+  selectedPeople
+  constructor(private dataservice: DataService, private cd: ChangeDetectorRef) { }
+
+  ngOnInit() {
+
+    this.peopleTypeahead.pipe(
+      distinctUntilChanged(),
+      debounceTime(300),
+      switchMap(term => this.dataservice.getPeople(term))
+    ).subscribe(x => {
+      this.cd.markForCheck();
+      this.serverSideFilterItems = x.response;
+      console.log(this.serverSideFilterItems)
+    }, (err) => {
+      console.log(err);
+      this.serverSideFilterItems = [];
+    });
+  }
+
+}

@@ -1,0 +1,19 @@
+.labelcolor{
+    color: #bebebe !important;
+}
+.input-size{
+    width:275px !important;
+    line-height: 2.1875rem !important; 
+}
+.card-minheight{
+    min-height: 82.5%;
+}
+
+.create-button {
+    width: 148px !important;
+    height: 50px !important;
+}
+.img_size{
+    height: 40px;
+    width: 40px;
+}

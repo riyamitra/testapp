@@ -1,0 +1,24 @@
+<app-navbar-container></app-navbar-container>
+
+<main role="main">
+    <div class="jumbotron">
+        <div class="container-fluid m-3">
+            <div class="row">
+                <div class="col-md-4 font-28 text-muted "> Teams </div>
+                <div class="ml-auto mr-5">
+                    <button type="button" class="btn btn-danger create-button font-weight-bold" [routerLink]="'/createteams'">Create
+                        Team
+                    </button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3 parent_team" *ngFor="let items of teams">
+                    <app-teams-card [teams]="items"></app-teams-card>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</main>

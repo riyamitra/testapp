@@ -1,0 +1,29 @@
+<div class="card">
+  <div class="card-body">
+    <div class="d-flex flex-row">
+
+      <div class="col-md-3">
+        <div class="d-flex flex-row productname-color">
+          <i class="material-icons font-18" (click)="openInModel()"> border_color </i>
+          <div class="pl-3 font-14">{{product?.name}}</div>
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <div class="d-flex flex-row" *ngFor="let assets of product?.assests.slice(0,2)">
+          <app-product-switchcase [assets]="assets">
+          </app-product-switchcase>
+          <div class=" font-14">{{assets.assestName}}</div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <span class="badge badge-primary p-1 m-2" *ngFor="let signal of product?.signals.slice(0,4)" [ngStyle]="{'background-color':signal.color}">
+          {{signal.signal}}
+        </span>
+        <i class="material-icons mt-1" (click)="isExpanded()">add</i>
+      </div>
+
+    </div>
+  </div>
+</div>

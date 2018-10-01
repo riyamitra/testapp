@@ -1,0 +1,25 @@
+<ng-select [multiple]="true" [items]="serverSideFilterItems" [(ngModel)]="selectedPeople" placeholder="Select people" bindLabel="name"
+  bindValue="id" [typeahead]="peopleTypeahead">
+  <ng-template ng-typetosearch-tmp>
+    <div class="ng-option disabled">
+      Start typing...
+    </div>
+  </ng-template>
+  <ng-template ng-notfound-tmp let-searchTerm="searchTerm">
+    <div class="ng-option disabled">
+      No data found for "{{searchTerm}}"
+    </div>
+  </ng-template>
+  <ng-template ng-loadingtext-tmp let-searchTerm="searchTerm">
+    <div class="ng-option disabled">
+      Fetching data for "{{searchTerm}}"
+    </div>
+  </ng-template>
+
+  <ng-template ng-option-tmp let-item="item" let-index="index" let-search="searchTerm">
+    <div class="d-flex">
+      <img class="img_size mr-2" [src]="item.profileImage" />
+      <div>{{item.name}}</div>
+    </div>
+  </ng-template>
+</ng-select>

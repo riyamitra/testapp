@@ -1,0 +1,19 @@
+.cardfont-weight{
+    font-weight: 700!important;
+}
+
+.cardfont-color{
+    color: #555555 !important;
+}
+
+.font-grey{
+    color: #cfcfcf !important;
+}
+
+.task-complete{
+    border-top: 3px solid #df756a;
+}
+
+.task-incomplete{
+    border-top: 3px solid #2196f2;
+}

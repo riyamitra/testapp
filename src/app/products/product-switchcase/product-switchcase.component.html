@@ -1,0 +1,17 @@
+<ng-container [ngSwitch]="assets.assestType">
+  <ng-container *ngSwitchCase="'PDF'">
+    <img src=" assets/image/PDF.svg" alt=" " class="image-size " />
+  </ng-container>
+  <ng-container *ngSwitchCase="'DOC'">
+    <img src=" assets/image/docx.png" alt=" " class="image-size " />
+  </ng-container>
+  <ng-container *ngSwitchCase="'application/octet-stream'">
+    <img src=" assets/image/XLSX.png" alt=" " class="image-size " />
+  </ng-container>
+  <ng-container *ngSwitchCase="'IMAGE'">
+    <img src=" assets/image/IMAGE.jpg" alt=" " class="image-size " />
+  </ng-container>
+  <ng-container *ngSwitchDefault>
+    <img src=" assets/image/docx.png" alt=" " class="image-size " />
+  </ng-container>
+</ng-container>

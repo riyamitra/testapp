@@ -1,0 +1,42 @@
+<div class="card m-2 pb-3">
+  <div class="card-body p-2" [ngClass]={}>
+
+    <div class="row p-1">
+      <div class="col-md-2">
+        <img src={{task.contactPersonImage}} alt="">
+      </div>
+
+      <div class="col-md-6">
+        <div class="d-flex flex-column">
+          <div class="font-12 cardfont-color"> {{task.taskType}} </div>
+          <div class="font-16 cardfont-weight"> {{task.companyName.slice(0,15)}}.. </div>
+          <div class="font-12 cardfont-color"> {{task.contactPersonName}} </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="d-flex flex-column">
+          <div class="font-13">{{task.status}}</div>
+          <i class="material-icons"> call </i>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="font-grey font cardfont-weight">Start Time </div>
+        <div class="font-14"> {{task.startTime}} </div>
+      </div>
+      <div class="col-md-4">
+        <div class="font-grey font cardfont-weight"> Duration </div>
+        <div class="font-14"> {{task.duration}} </div>
+      </div>
+      <div class="col-md-4">
+        <div class="font-grey font cardfont-weight"> Score </div>
+        <div>
+          <ngb-rating [(rate)]="task.rating" max="5"></ngb-rating>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

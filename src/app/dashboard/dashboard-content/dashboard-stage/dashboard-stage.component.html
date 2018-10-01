@@ -1,0 +1,20 @@
+<div class="row justify-content-center ">
+    <select class="form-control selectmin-width" id=" exampleFormControlSelect2">
+        <option>1</option>
+    </select>
+    <div class="p-2 align-items-center">VS</div>
+    <select class="form-control selectmin-width" id=" exampleFormControlSelect2">
+        <option>1</option>
+    </select>
+</div>
+
+<div class="w-100 position-relative">
+    <div class="myline w-100"></div>
+    <div class="row rowposition w-100 pt-2 pb-2 ml-0">
+        <div class="col minwidth" *ngFor="let item of abc; let i=index;" style="z-index: 1;">
+            <button type="button" class="btn btn-dark p-1 font-12 overlap button-width" [ngClass]="{
+        'button-red':i === 3}">Stage
+                {{i}}</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<ngb-tabset class="dashboardtabset" (tabChange)="beforeChange($event)" [justify]="'end'">
+
+  <ngb-tab id="tab-teams" title="Teams">
+    <ng-template ngbTabContent>
+      <select class="form-control mt-3 mb-3 min-width ml-auto" id="selectPipeline" [(ngModel)]="selectedPipeline">
+        <option *ngFor="let pipeline of pipelineList" [value]="pipeline.id">{{pipeline.name}}</option>
+      </select>
+
+      <div class="card">
+        <div class="card-body">
+          <app-dashboard-stage> </app-dashboard-stage>
+          <app-dashboard-tab> </app-dashboard-tab>
+        </div>
+      </div>
+    </ng-template>
+  </ngb-tab>
+
+  <ngb-tab id="tab-individuals" title="Individual">
+    <ng-template ngbTabContent>
+      <select class="form-control mt-3 mb-3 min-width ml-auto" id="selectPipeline" [(ngModel)]="selectedPipeline">
+        <option *ngFor="let pipeline of pipelineList" [value]="pipeline.id">{{pipeline.name}}</option>
+      </select>
+
+      <div class="card">
+        <div class="card-body">
+          <app-dashboard-stage> </app-dashboard-stage>
+          <app-dashboard-tab> </app-dashboard-tab>
+        </div>
+      </div>
+    </ng-template>
+  </ngb-tab>
+
+</ngb-tabset>

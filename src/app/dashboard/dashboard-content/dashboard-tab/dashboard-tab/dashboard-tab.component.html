@@ -1,0 +1,59 @@
+<div class="row">
+  <ngb-tabset class="dashboardtab-tab maxwidth" [justify]="'center'">
+    <ngb-tab id="tab-pipeline" title="Pipeline">
+      <ng-template ngbTabContent>
+        <div class="w-100">
+          <div class="row rowoverflow mt-0">
+            <div class="col minwidth p-0" *ngFor="let stage of array1">
+              <div class="bg-grey borderright">
+                <div class="background p-2 font-weight-bold font-12 text-center mb-4">Stage {{stage}}</div>
+                <div class="justify-content-center" *ngFor="let card of array2">
+                  <div class="card p-0 m-3 size bordertop">
+                    <div class="card-header p-2 aligntext">
+                      <div class="d-flex justify-content-center">
+                        <div class="text-color font-weight-bold font-13">Call</div>
+                        <i class="material-icons ml-auto iconposition iconcolor">more_vert</i>
+                      </div>
+                    </div>
+                    <div class="card-body p-1">
+                      <div class="card-text">
+                        <div class=" p-1 font-11 text-left font-weight-bold text-grey">name</div>
+                        <div class=" p-1 font-11 text-left font-weight-bold text-grey">company</div>
+                        <div class="d-flex pt-1 pb-1">
+                          <div class="p-1 font-11 font-weight-bold text-grey">date & time</div>
+                          <img src="https://business.talentify.in/users/M.png" alt="img" class="ml-auto imgsize" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </ng-template>
+    </ngb-tab>
+
+    <ngb-tab id="tab-Calendar" title="Calendar">
+      <ng-template ngbTabContent>
+        <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
+          farm-to-table
+          craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
+          ullamco
+          ad
+          vinyl
+          cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica
+          VHS
+          salvia
+          yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit,
+          sustainable
+          jean
+          shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr
+          butcher
+          vero
+          sint qui sapiente accusamus tattooed echo park.</p>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+</div>

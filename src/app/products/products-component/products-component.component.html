@@ -1,0 +1,37 @@
+<app-navbar-container></app-navbar-container>
+
+<main role="role">
+  <div class="jumbotron">
+    <div class="container-fluid pl-6 pr-6">
+      <div class="d-flex bd-highlight mt-3">
+        <div class="mr-auto bd-highlight font-28 text-muted">
+          Products
+        </div>
+        <div class="p-2 bd-highlight">
+          <select [(ngModel)]="selectedProduct" class="form-control select-width" id="exampleFormControlSelect1">
+            <option value="-1">All</option>
+            <option *ngFor="let item of dropdown" [value]="item.id">{{item.name}}</option>
+          </select>
+        </div>
+        <div class="p-2 bd-highlight">
+          <button type="button" class="btn btn-danger" (click)="open()"> Add Products </button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex flex-row">
+            <div class="col-md-3 text-dark font-weight-bold"> PRODUCT NAME </div>
+            <div class="col-md-6 text-dark font-weight-bold"> DOCUMENTS </div>
+            <div class="col-md-3 text-dark font-weight-bold"> SIGNALS </div>
+          </div>
+        </div>
+      </div>
+
+      <div *ngFor="let product of products">
+        <app-product-card *ngIf="!product.expanded" [product]="product" (openModel)="opens($event)"></app-product-card>
+        <app-products-expanded *ngIf="product.expanded" [product]="product"></app-products-expanded>
+      </div>
+    </div>
+  </div>
+</main>

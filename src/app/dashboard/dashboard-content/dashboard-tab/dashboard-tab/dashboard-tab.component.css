@@ -1,0 +1,65 @@
+.minwidth{
+    min-width: 223px !important;
+    
+}
+
+.rowoverflow{
+    max-height: 400px;
+    overflow: auto !important;
+    flex-wrap: nowrap !important;
+    margin: 20px;
+}
+
+.border-box{
+    border: 2px solid black;
+}
+
+.size{
+    height: 136px !important;
+    width: 190px !important;
+    position: relative;
+}
+
+.aligntext{
+    text-align: center !important;
+    
+}
+
+.text-color{
+    color: rgb(126, 211, 33)
+}
+.bordertop{
+    border-top: 2px solid rgb(126, 211, 33);
+}
+
+.iconcolor{
+    color: black;
+}
+
+.imgsize{
+    height:28px;
+    width: 28px;
+}
+
+.iconposition{
+    position: absolute;
+    right: 0;
+    top: 3px;
+}
+
+.borderright{
+   border-right: 1px solid #bcbcbc !important;
+}
+
+.background{
+    background-color: #fafafa !important;
+    color: #bcbcbc
+}
+
+.bg-grey{
+    background: #f3f3f4 !important;;
+}
+
+.text-grey{
+    color: #5e5e5e !important;
+}

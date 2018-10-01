@@ -1,0 +1,108 @@
+<div class="container border-0 modal-lg p-0">
+  <section class="demo">
+    <form-wizard class="productwizard" (onStepChanged)="onStepChanged($event)">
+
+      <wizard-step [title]="'1. Product Details'" [isValid]="productForm.form.valid" (onNext)="onStep1Next($event)">
+        <div class="card border-0 p-4 m-4">
+          <div class="row justify-content-center ">
+            <div class="card h-100 p-4 m-4 shadow-lg size justify-content-center align-items-center">
+              <i class="material-icons iconstyle" (click)="imagefile.click()" *ngIf="!image">cloud_upload </i>
+              <input hidden type="file" #imagefile (change)="getFile($event)" accept="image/*" />
+            </div>
+          </div>
+          <img [src]="image" *ngIf="image" />
+          <form #productForm="ngForm">
+            <div class="form-group">
+              <div class="d-flex justify-content-center">
+                <label for="InputName" class="col-md-2 m-2 textalign fontproperties">Name</label>
+                <input type="text" class="col-md-10 form-control m-2" id="InputName" name="InputName" aria-describedby="name"
+                  placeholder="Enter name" [(ngModel)]="product.name" required />
+              </div>
+              <div class="d-flex justify-content-center">
+                <label for="InputDescription" class="col-md-2 textalign m-2 fontproperties">Description</label>
+                <textarea type="text" class="col-md-10 form-control  m-2" rows="3" id="InputDescription" name="InputDescription"
+                  aria-describedby="description" placeholder="Enter description" [(ngModel)]="product.description"
+                  required> </textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+      </wizard-step>
+
+      <wizard-step [title]="'2. Documents'" [showNext]="step2.showNext" [showPrev]="step2.showPrev" (onNext)="onStep2Next($event)">
+        <div class="card cardheight minheight" #scrollContainer>
+          <div class="card-body">
+            <div class="row pl-5">
+              <div class="col-md-10" *ngFor="let asset of product.assests">
+                <div class="row p-2 mt-2 cardbg">
+                  <div class="col-md-2">
+                    <button type="button" (click)="file.click()" class="btn btn-dark text-white buttonbg">Choose
+                      File</button>
+                    <input hidden #file type="file" (change)="getFileName($event, asset)" />
+                  </div>
+                  <div class="col-md-8 pt-1">
+                    <div *ngIf="!asset.assestName">
+                      No File Chosen
+                    </div>
+                    {{asset.assestName}}
+                  </div>
+                  <i class="col-md-2 material-icons common-color mt-2 p-0" (click)="deleteDocuments(asset)">close</i>
+
+                </div>
+              </div>
+              <div class="col-md-2"><i class="material-icons font-36 common-color mt-3 p-0" (click)="getDocuments()">add_circle</i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </wizard-step>
+
+      <wizard-step [title]="'3. Signals'" (onNext)="onStep3Next($event)">
+        <div class="card border-0 cardheight minheight">
+          <div class="row m-0 p-2">
+            <div class="col-md-11 mb-2" *ngFor="let signal of product.signals">
+              <div class="row justify-content-center">
+                <div class="col-md-5">
+                  <div class="form-group row">
+                    <label for="staticEmail" class="col-sm-4 col-form-label font-16 font-weight-bold signal-color">Signal</label>
+                    <div class="col-sm-8">
+                      <select class="form-control " id="staticEmail" [(ngModel)]="signal.signal">
+                        <option value="">Select Signal Type</option>
+                        <option value="Lead Validation">Lead Validation</option>
+                        <option value="Competitor">Competitor</option>
+                        <option value="Appointment">Appointment</option>
+                        <option value="Politeness">Politeness</option>
+                        <option value="Appointment Request Signal">Appointment Request Signal</option>
+                        <option value="Primary Interest Signal">Primary Interest Signal</option>
+                        <option value="Choice Signal">Choice Signal</option>
+                        <option value="Empathy">Empathy</option>
+                        <option value="Premium">Premium</option>
+                        <option value="Benefits">Benefits</option>
+                        <option value="Feature">Feature</option>
+                        <option value="inteterested">inteterested</option>
+                        <option value="Brand">Brand</option>
+                      </select> </div>
+                  </div>
+                </div>
+                <div class="col-md-3 ml-0">
+                  <input type="text" class="form-control" placeholder="add signal description" [(ngModel)]="signal.script" />
+                </div>
+                <div class="col-md-1 ml-0 mt-2">
+                  <input [value]="color" [style.background]="signal.color" [cpOutputFormat]="'hex'" [(colorPicker)]="signal.color"
+                    [(ngModel)]="signal.color" class="colorpickersize" />
+                </div>
+                <div class="col-md-1 ml-0 mt-2 common-color">
+                  <i class="material-icons">close</i>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-1 p-0">
+              <i class="material-icons common-color font-36 " (click)="addSignal()">add_circle</i>
+            </div>
+          </div>
+        </div>
+      </wizard-step>
+
+    </form-wizard>
+  </section>
+</div>

@@ -1,0 +1,14 @@
+.text-grey{
+    color: #8c8c8c !important;
+}
+.card-shadow{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px !important;
+}
+.card-size{
+    height: 90px;
+    width: 224px;
+}
+.imagesize{
+    height: 107px;
+    width: 107px;
+}

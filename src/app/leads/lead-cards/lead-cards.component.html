@@ -1,0 +1,40 @@
+<div class="card">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="font-weight-bold font-20 ml-4 mb-2 ">
+          <div> {{leads.company}}</div>
+          <!-- <input-editor label="First Name" id="txtname" type="text" [(ngModel)]="name" placeholder="Enter First Name"
+          (onSave)="sampleClick()"></input-editor> -->
+        </div>
+        <div class="card card-shadow card-size ml-4">
+          <div class="card-body p-2">
+            <div class="d-flex flex-column" *ngFor="let salesContactPersons of leads.salesContactPersons">
+              <div class="font-weight-bold font-16 pb-2"> {{salesContactPersons.name}} </div>
+              <div class="font-14 text-grey"> {{salesContactPersons.email}} </div>
+              <div class="font-14 text-grey"> {{salesContactPersons.phone}} </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="card w-100 card-shadow">
+          <div class="card-body p-2">
+            <div class="d-flex">
+              <div>
+                <img src={{leads.allocationLead.profileImage}} alt="profile image" class="imagesize border-4" />
+              </div>
+              <div>
+                <div class="d-flex flex-column pl-3">
+                  <div class="font-16 font-weight-bold mb-3"> {{leads.allocationLead.name}} </div>
+                  <div class="font-15 text-grey mb-3"> {{leads.pipelineName}} </div>
+                  <div class="font-14 text-grey mb-3"> {{leads.allocationLead.next}} </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

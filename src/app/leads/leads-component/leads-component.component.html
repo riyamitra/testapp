@@ -1,0 +1,56 @@
+<app-navbar-container></app-navbar-container>
+
+<main role="main">
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row mb-4 mt-4">
+
+        <div class="col-md-10">
+          <div class="d-flex">
+            <div class="p-2">
+              <input type="text" class="form-control selectheight" placeholder="Search..." />
+              <!-- <i class="material-icons">search</i> -->
+            </div>
+            <div class="p-2 ">
+              <select class="form-control selectheight bgcolor">
+                <option>Filter</option>
+                <option>Name</option>
+                <option>Company</option>
+                <option>Email</option>
+                <option>City</option>
+                <option>State</option>
+              </select>
+            </div>
+            <div class="p-2">
+              <select class="form-control selectheight bgcolor">
+                <option>Sort</option>
+                <option>Name</option>
+                <option>Company</option>
+                <option>Email</option>
+                <option>City</option>
+                <option>State</option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-2 p-2">
+          <button type="button" class="btn btn-danger font-15 pr-4 pl-4 selectheight" [swal]="{ title: 'Enter your email', input: 'email' }"
+            (confirm)="saveEmail($event)">Add
+            Leads</button>
+        </div>
+
+      </div>
+      <div *ngFor="let item of leads">
+        <app-lead-cards [leads]="item">
+        </app-lead-cards>
+      </div>
+
+      <div class="row">
+        <ngb-pagination [collectionSize]="numberofPages" [maxSize]="5" [rotate]="true"></ngb-pagination>
+
+      </div>
+
+    </div>
+  </div>
+</main>

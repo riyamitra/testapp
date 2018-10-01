@@ -1,0 +1,5 @@
+<ngx-slick class="carousel" #slickModal="slick-modal" [config]="slideConfig" (afterChange)="afterChange($event)">
+  <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+    <app-dashboard-card [task]="slide"></app-dashboard-card>
+  </div>
+</ngx-slick>

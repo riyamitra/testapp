@@ -1,0 +1,16 @@
+.image-size{
+    height: 1.5rem !important;
+    width: 1.5rem !important;
+}
+
+.productname-color{
+    color: #555555 !important;
+}
+
+.badgemin-width{
+    min-width: 134px;
+}
+
+.lineheight-0{
+    line-height :unset
+}

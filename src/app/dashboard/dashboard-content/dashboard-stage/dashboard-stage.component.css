@@ -1,0 +1,32 @@
+.selectmin-width{
+    width: 250px;
+}
+
+.overlap{
+    z-index: 1;
+}
+
+.myline{
+    border-top:2px solid #e8e8e8;
+    position: absolute;
+    top: 43%;
+}
+
+.minwidth{
+    min-width: 200px;
+}
+
+.rowposition{
+    flex-wrap: nowrap !important;
+    overflow: auto;
+}
+
+.button-red{
+    background-color: #eb345f !important;
+    border-color:  #eb345f !important;
+}
+
+.button-width{
+    min-width: 76px !important;
+    max-width: 76px !important;
+}
