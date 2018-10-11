@@ -8,8 +8,7 @@ import { LeadsComponentComponent } from './leads/leads-component/leads-component
 import { TeamsCreateComponent } from './teams/teams-create/teams-create.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardContainerComponent },
+  { path: '', redirectTo: 'pipeline', pathMatch: 'full' },
   { path: 'pipeline', component: PipelineContainerComponent },
   { path: 'teams', component: TeamsContainerComponent },
   { path: 'createteams', component: TeamsCreateComponent },

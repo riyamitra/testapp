@@ -32,6 +32,7 @@
     "ngx-drag-drop": "^1.0.4",
     "ngx-dropzone-wrapper": "^6.2.0",
     "ngx-slick": "^0.2.1",
+    "ngx-treeview": "^6.0.1",
     "rxjs": "^6.0.0",
     "sweetalert2": "^7.26.28",
     "zone.js": "~0.8.26"

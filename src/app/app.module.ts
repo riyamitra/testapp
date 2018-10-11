@@ -12,6 +12,7 @@ import { ColorPickerModule } from 'ngx-color-picker';
 import { FormWizardModule } from 'angular2-wizard';
 import { SweetAlert2Module } from '@toverux/ngx-sweetalert2';
 import { DndModule } from 'ng2-dnd';
+import { TreeviewModule } from 'ngx-treeview';
 // import { InputEditorModule } from 'angular-inline-editors';
 // import { SelectEditorModule } from 'angular-inline-editors';
 
@@ -36,6 +37,7 @@ import { ProductModalComponent } from './products/product-modal/product-modal.co
 import { LeadCardsComponent } from './leads/lead-cards/lead-cards.component';
 import { DragndropComponent } from './dragndrop/dragndrop/dragndrop.component';
 import { assertDataInRangeInternal } from '@angular/core/src/render3/util';
+import { TreeviewcomponentComponent } from './treeviewcomponent/treeviewcomponent.component';
 
 
 
@@ -61,6 +63,7 @@ import { assertDataInRangeInternal } from '@angular/core/src/render3/util';
         ProductModalComponent,
         LeadCardsComponent,
         DragndropComponent,
+        TreeviewcomponentComponent,
 
 
 
@@ -79,9 +82,10 @@ import { assertDataInRangeInternal } from '@angular/core/src/render3/util';
         SweetAlert2Module.forRoot(),
         // InputEditorModule.forRoot(),
         // SelectEditorModule.forRoot(),
-        DndModule.forRoot()
+        DndModule.forRoot(),
+        TreeviewModule.forRoot()
 
-      
+
     ],
 
     entryComponents: [ProductModalComponent],
